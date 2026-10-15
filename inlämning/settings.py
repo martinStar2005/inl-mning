@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     # MY APPS
     'sidor'
 ]
@@ -57,7 +57,9 @@ ROOT_URLCONF = 'inlämning.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            str(BASE_DIR.joinpath('templates'))
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
